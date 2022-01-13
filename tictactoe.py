@@ -63,10 +63,6 @@ while True:
         print(NewdrawnBoard)
         Player1_number = int(input(f"{Player1} Choose a number on the board:"))
         print(NewdrawnBoard)
-        
-    #Checks if someone wins
-    
-    if 
 
     #ends game when board is full
     if len_of_Board == int(8):
