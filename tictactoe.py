@@ -1,5 +1,3 @@
-#ask for names 
-from typing import Counter
 
 
 Player1 = input("Enter Player 1 name:")
@@ -40,11 +38,10 @@ drawnBoard ="""1 | 2 | 3
 NewdrawnBoard = drawnBoard
 
 print(drawnBoard)
-#Ask for player1 Input
-Player1_number = int(input(f"{Player1} Choose a number on the board:"))
 #setting player numbers at zero
 Player2_number = 0
-
+#Ask for player1 Input
+Player1_number = int(input(f"{Player1} Choose a number on the board:"))
 #Start loop
 while True:
     #Player1
@@ -62,13 +59,10 @@ while True:
         NewdrawnBoard = NewdrawnBoard.replace(Player2_number , Player2_Choice)
         print(NewdrawnBoard)
         Player1_number = int(input(f"{Player1} Choose a number on the board:"))
-        print(NewdrawnBoard)
-
-    #ends game when board is full
-    if len_of_Board == int(8):
+        
+    if len(board) == int(8):
         Player1_number = str(Player1_number)
-        board.append(Player1_number)
         NewdrawnBoard = NewdrawnBoard.replace(Player1_number , Player1_Choice)
         print(NewdrawnBoard)
-        print("\nGame Over")
+        print("Game Over")
         quit()
